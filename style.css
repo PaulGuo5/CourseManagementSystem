@@ -1,0 +1,694 @@
+/* css Zen Garden submission 097 - 'No Frontiers!', by Michal Mokrzycki, http://hyperreal.info/bhang/ */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* All associated graphics copyright 2004, Michal Mokrzycki */
+/* Added: April 9th, 2004 */
+
+/* IMPORTANT */
+/* This design is not a template. You may not reproduce it elsewhere without the 
+   designer's written permission. However, feel free to study the CSS and use 
+   techniques you learn from it elsewhere. */
+
+/* basics */
+body {
+	font: small "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #676767;
+	margin: 0px;
+	padding: 0px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* text styles */
+p {
+	font: 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	margin-top: 0px;
+	text-align: justify;
+}
+
+abbr {
+	font-weight: bold;
+	color: #e18700;
+	text-transform: uppercase;
+}
+
+.summary abbr {
+	font-weight: bold;
+}
+
+calendar {
+	text-align: center
+}
+
+.Cal {
+	width: 100%;
+	font-size: 12px;
+	font-family: arial;
+	padding: 0;
+	line-height: 22px;
+	margin-left: 7px;
+	background: url(images/bg_cal.jpg) center center no-repeat
+}
+
+.CalTitle {
+	background: transparent;
+	font-family: verdana;
+	font-size: 12px;
+	color: #09c;
+	height: 30px
+}
+
+.CalDayHeader {
+	border: solid 0 red;
+	font-weight: bold;
+	background-color: transparent
+}
+
+.CalTodayDay {
+	border: solid 0 red;
+	background: #dce7ec
+}
+
+.CalSelector {
+	border: solid 0 red;
+	background: transparent
+}
+
+.CalWeekendDay {
+	background: #e9f1f8
+}
+
+.CalOtherMonthDay {
+	color: gray
+}
+
+.CalNextPrev {
+	border: solid 0 red;
+	padding: 5px;
+	font-weight: bold
+}
+
+h3 {
+	letter-spacing: 1px;
+	margin-bottom: 0px;
+}
+
+a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+a:visited {
+	font-weight: normal;
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+	color: #000000;
+}
+
+/* structure, specific texts */
+.page-wrapper {
+	padding: 0px;
+	margin: 0px;
+}
+
+header {
+	position: absolute;
+	left: 0px;
+	top: 190px;
+	width: 291px;
+	height: 159px;
+	background: transparent url(green_top.gif) no-repeat top left;
+	z-index: 3;
+}
+
+header h1 {
+	position: absolute;
+	top: 59px;
+	background-color: #bbbf58;
+	border-right: 2px solid #fff;
+	width: 289px;
+	height: 150px;
+	margin: 0;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+header h2 {
+	position: absolute;
+	top: 118px;
+	background: transparent url(green_bottom.gif) no-repeat bottom left;
+	width: 291px;
+	height: 135px;
+	margin: 0;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.top-background {
+	position: absolute;
+	top: -200px;
+	left: 0px;
+	height: 200px;
+	width: 100%;
+	background: url(picture/bg_2.jpg);
+	background-size: cover;
+}
+
+.information {
+	position: absolute;
+	top: 80px;
+	left: 80px;
+	height: 180px;
+	width: 186px;
+	line-height: 3;
+	text-align: center;
+}
+
+.summary {
+	position: absolute;
+	top: 270px;
+	left: 20px;
+	width: 245px;
+	line-height: 2;
+	z-index: 3;
+}
+
+.summary p {
+	color: #fff;
+	font-size: 11px;
+	line-height: 1.5;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.preamble {
+	position: absolute;
+	width: 291px;
+	top: 455px;
+	margin: 0;
+	z-index: 3;
+}
+
+.preamble h3 {
+	background: transparent url(enlightment.gif) no-repeat top left;
+	width: 291px;
+	height: 37px;
+	margin-bottom: 10px;
+	padding: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.preamble p {
+	color: #7A7D55;
+	font-size: 11px;
+	line-height: 1.5;
+	padding: 0 20px 10px 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.preamble p:nth-child(4) {
+	padding-bottom: 300px;
+	background: transparent url(leftback.gif) 17px 110px no-repeat;
+}
+
+#main {
+	width: 1400px;
+	height: 500px;
+	MARGIN-RIGHT: auto;
+	MARGIN-LEFT: auto;
+}
+
+.practice {
+	margin: 50px auto;
+	width: 300px;
+} /* 居中div               太短了看不见*/
+.teacher {
+	margin: 50px auto;
+	width: 1000px;
+}
+
+.comment {
+	width: 50%;
+}
+
+.addstudent {
+	margin: 20px auto;
+	width: 300px;
+}
+
+.experiment {
+	margin: 50px auto;
+	width: 500px;
+}
+
+.course {
+	margin: 50px auto;
+	width: 500px;
+}
+
+.upload {
+	margin: 50px auto;
+	width: 500px;
+}
+
+.exp_detail {
+	margin: 5px auto;
+	width: 1000px;
+}
+
+.report {
+	margin: 5px auto;
+	width: 300px;
+}
+
+.index {
+	margin: 50px auto;
+	width: 1000px;
+}
+
+.changepwd {
+	margin: 5px auto;
+	width: 500px;
+}
+
+.courses_tubiao {
+	
+	height: 50px;
+	width: 50px;
+	left: 300px;
+	background: url(../picture/timg.jpg);
+	background-size: cover;
+}
+
+.tubiao {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	left: 300px;
+	background: url(picture/tubiao.jpg);
+	background-size: cover;
+}
+
+.supporting {
+	position: relative;
+	top: 0;
+	margin: 0 0px 0px 300px;
+	min-width: 315px;
+	z-index: 2;
+}
+
+.titlebt {
+	font-size: 14px;
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+	background-image: url(top_bt.jpg);
+	background-repeat: no-repeat;
+	display: block;
+	text-indent: 15px;
+	padding-top: 5px;
+}
+
+.titlebt a:link {
+	font-weight: bold;
+	text-decoration: none;
+	color: #000000;
+}
+
+.titlebt a:visited {
+	font-weight: normal;
+	text-decoration: none;
+	color: #000000;
+}
+
+.titlebt a:hover, a:active {
+	background-color: #000000;
+	color: #fff
+}
+
+.left_topbg {
+	background-image: url(content-bg.gif);
+	background-repeat: repeat-x;
+}
+
+.explanation {
+	background: transparent url(zengarden.gif) no-repeat top right;
+	position: relative;
+	left: 10px;
+	top: 185px;
+	hegiht: 200px;
+}
+
+.explanation h1 {
+	margin-top: 0px;
+}
+
+.explanation h3 {
+	position: relative;
+	top: 15px;
+	width: 305px;
+	height: 41px;
+	background: transparent url(heading_1.gif) no-repeat top left;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.explanation p, .participation p, .benefits p, .requirements p {
+	margin-left: 11px;
+	margin-right: 20px;
+	padding: 10px;
+}
+
+.participation h3 {
+	position: relative;
+	top: 15px;
+	width: 177px;
+	height: 28px;
+	background: transparent url(heading_2.gif) no-repeat top left;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.benefits h3 {
+	position: relative;
+	top: 15px;
+	width: 120px;
+	height: 24px;
+	background: transparent url(heading_3.gif) no-repeat top left;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.requirements h3 {
+	position: relative;
+	top: 15px;
+	width: 193px;
+	height: 28px;
+	background: transparent url(heading_4.gif) no-repeat top left;
+	margin-top: 0;
+	margin-bottom: 10px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+footer {
+	text-align: center;
+	padding-bottom: 30px;
+	background-color: #fff;
+}
+
+footer a:link, a:visited {
+	font-size: 11px;
+}
+
+footer a:hover, a:active {
+	background-color: #A23400;
+	color: #fff;
+}
+
+.sidebar {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin-left: 630px;
+	z-index: 1;
+}
+
+.sidebar .wrapper {
+	background: transparent url(pickup_top.gif) 10px 0 no-repeat;
+	font: 10px verdana, sans-serif;
+	padding-top: 60px;
+	width: 170px;
+}
+
+.sidebar h3.select {
+	margin-top: 0;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sidebar h3.archives {
+	background: transparent url(archives_back.gif) no-repeat top left;
+	margin: 20px 0px 5px 8px;
+	width: 76px;
+	height: 20px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sidebar h3.resources {
+	background: transparent url(resources_back.gif) no-repeat top left;
+	margin: 20px 0px 5px 8px;
+	width: 89px;
+	height: 20px;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.sidebar ul {
+	margin: 0px;
+	padding: 0px;
+}
+
+.sidebar li {
+	line-height: 1.1;
+	list-style-type: none;
+	display: block;
+	padding-top: 5px;
+	margin-bottom: 2px;
+	margin-left: 10px;
+	padding-left: 15px;
+	padding-bottom: 5px;
+}
+
+.design-selection li {
+	background: transparent url(link_dot.gif) 0 7px no-repeat;
+}
+
+.design-archives li, #lfavorites li {
+	background: transparent url(link_dot2.gif) 0 7px no-repeat;
+}
+
+.zen-resources li {
+	background: transparent url(link_dot3.gif) 0 7px no-repeat;
+}
+
+.sidebar li a:link, a:visited {
+	font-size: 9px;
+	font-weight: bold;
+	font-family: verdana, sans-serif;
+	color: #706A47;
+}
+
+.sidebar li a:hover, a:active {
+	background-color: #909528;
+	color: #fff;
+}
+
+.button {
+	margin-left: 20px;
+	margin-right: 20px;
+	width: 70px;
+	height: 14px;
+	float: right;
+}
+
+.button:last-child {
+	margin-right: 0px;
+}
+
+.button {
+	display: block;
+	font-size: 12px;
+	text-decoration: none !important;
+	font-family: Helvetica, Arial, sans serif;
+	padding: 8px 12px;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	box-shadow: inset 0px 0px 2px #fff;
+	-o-box-shadow: inset 0px 0px 2px #fff;
+	-webkit-box-shadow: inset 0px 0px 2px #fff;
+	-moz-box-shadow: inset 0px 0px 2px #fff;
+}
+
+.button:active {
+	box-shadow: inset 0px 0px 3px #999;
+	-o-box-shadow: inset 0px 0px 3px #999;
+	-webkit-box-shadow: inset 0px 0px 3px #999;
+	-moz-box-shadow: inset 0px 0px 3px #999;
+}
+
+.grey {
+	color: #444;
+	border: 1px solid #d0d0d0;
+	background-image: -moz-linear-gradient(#ededed, #e1e1e1);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#e1e1e1),
+		to(#ededed));
+	background-image: -webkit-linear-gradient(#ededed, #e1e1e1);
+	background-image: -o-linear-gradient(#ededed, #e1e1e1);
+	text-shadow: 1px 1px 1px #fff;
+	background-color: #e1e1e1;
+}
+
+.grey:hover {
+	border: 1px solid #b0b0b0;
+	background-image: -moz-linear-gradient(#e1e1e1, #ededed);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ededed),
+		to(#e1e1e1));
+	background-image: -webkit-linear-gradient(#e1e1e1, #ededed);
+	background-image: -o-linear-gradient(#e1e1e1, #ededed);
+	background-color: #ededed;
+}
+
+.grey:active {
+	border: 1px solid #666;
+}
+
+.student_table {
+	border-collapse: collapse;
+}
+
+.teacher_table {
+	border-collapse: collapse;
+}
+
+.td0 {
+	border-bottom: 1px #000000 dashed
+}
+
+.td2 {
+	border: 1px solid black;
+	border-bottom: 0;
+	padding: 10px;
+}
+
+.td1 {
+	border: 1px solid black;
+	border-right: 0;
+	border-top: 0;
+	padding: 10px;
+}
+
+.td3 {
+	border: 1px solid black;
+	border-bottom: 0;
+	padding: 10px;
+}
+
+.td4 {
+	border: 1px solid black;
+	border-bottom: 0;
+	padding: 10px;
+}
+
+.td5 {
+	border: 1px solid black;
+	border-top: 0;
+	padding: 10px;
+}
+
+.td6 {
+	border: 1px solid black;
+	border-top: 0;
+	border-bottom: 0;
+	padding: 10px;
+}
+
+.information_bg {
+	left: 30px;
+	position: absolute;
+	height: 220px;
+	width: 260px;
+	line-height: 3;
+	text-align: center;
+	background: url(picture/bg_inf.jpg);
+	background-size: cover;
+}
+
+.informatino_bg img {
+	width: 100%;
+	height: 100%;
+}
+
+.button2 {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 16px/100% 'Microsoft yahei', Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+	-webkit-border-radius: .5em;
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+}
+
+.button2:hover {
+	text-decoration: none;
+}
+
+.button2:active {
+	position: relative;
+	top: 1px;
+}
+
+.bigrounded {
+	-webkit-border-radius: 2em;
+	-moz-border-radius: 2em;
+	border-radius: 2em;
+}
+
+.blue {
+	color: #d9eef7;
+	border: solid 1px #8080ff;
+	background: #0095cd;
+	background: -webkit-gradient(linear, left top, left bottom, from(#00adee),
+		to(#0078a5));
+	background: -moz-linear-gradient(top, #00adee, #0078a5);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00adee',
+		endColorstr='#0078a5');
+}
+
+.blue:hover {
+	background: #007ead;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0095cc),
+		to(#00678e));
+	background: -moz-linear-gradient(top, #0095cc, #00678e);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095cc',
+		endColorstr='#00678e');
+}
+
+.blue:active {
+	color: #80bed6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#0078a5),
+		to(#00adee));
+	background: -moz-linear-gradient(top, #0078a5, #00adee);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0078a5',
+		endColorstr='#00adee');
+}

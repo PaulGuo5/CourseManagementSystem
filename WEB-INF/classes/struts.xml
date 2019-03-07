@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+		"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 允许动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<!-- 开发模式，便于调试 -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 配置文件修改了，不需要重启服务器 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- jsp中不使用struts的样式 -->
+	<constant name="struts.ui.theme" value="simple" />
+	<!-- Action所在的包的后缀 -->
+	<constant name="struts.convention.package.locators" value="action,actions,struts,struts2" />
+	<constant name="struts.multipart.maxSize" value="524288000" />
+	<package name="fund" extends="struts-default">
+		<!-- 使用通配符简化配置 -->
+		<!-- Add acttion here -->
+		<!-- 用于链接请求 -->
+		<action name="login" class="com.se.controller.loginAction"
+				method="login">
+			<result name="teacher">index.jsp</result>
+			<result name="student">index_stu.jsp</result>
+			<result name="admin">index_admin.jsp</result>
+			<result name="input">login_fail.jsp</result>
+		</action>
+		<action name="logout" class="com.se.controller.loginAction"
+				method="logout">
+			<result name="success">login.jsp</result>
+		</action>
+
+		<action name="show" class="com.se.controller.showAction"
+				method="show">
+			<result name="success">Student.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+
+		<action name="show_admin" class="com.se.controller.showAction_admin"
+				method="show_admin">
+			<result name="success" >Student_admin.jsp</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+
+		<action name="delete_student_admin" class="com.se.controller.showAction_admin"
+				method="delete">
+			<result name="delete" type="chain">show_admin</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+
+		<action name="showTeacher_admin" class="com.se.controller.showteachAction_admin"
+				method="show_teacher">
+			<result name="success" >teachList_admin.jsp</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+		<action name="delete_teacher_admin" class="com.se.controller.showteachAction_admin"
+				method="delete">
+			<result name="delete" type="chain">showTeacher_admin</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+
+		<action name="showfile*" class="com.se.controller.showfileAction"
+				method="showfile{1}">
+			<result name="success">Courses.jsp</result>
+			<result name="input">index.jsp</result>
+			<result name="stu">Courses_stu.jsp</result>
+		</action>
+		<action name="deletefile" class="com.se.controller.deletefileAction"
+				method="deletefile">
+			<result name="success" type="chain">showfile</result>
+			<result name="input">index.jsp</result>
+		</action>
+
+		<action name="insert_student" class="com.se.controller.insert_studentAction"
+				method="insert">
+			<result name="success" type="chain">show</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+
+		<action name="insert_student_admin" class="com.se.controller.insert_student_adminAction"
+				method="insert">
+			<result name="insert_admin" type="chain">show_admin</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+
+		<action name="insert_teacher_admin" class="com.se.controller.insert_teacher_adminAction"
+				method="insert">
+			<result name="insert_admin" type="chain">showTeacher_admin</result>
+			<result name="input">index_admin.jsp</result>
+		</action>
+
+		<action name="teach*" class="com.se.controller.teachAction"
+				method="teach{1}">
+			<result name="success">Teacher.jsp</result>
+			<result name="stu">Teacher_stu.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+
+		<action name="left*" class="com.se.controller.leftMessageAction"
+				method="left{1}">
+			<result name="message" type="chain">show_*</result>
+		</action>
+
+		<action name="*teach" class="com.se.controller.teachAction"
+				method="{1}teach">
+			<result name="success" type="chain">teach</result>
+			<result name="input">index.jsp</result>
+		</action>
+
+		<action name="upload" class="com.se.controller.uploadAction"
+				method="upload">
+			<param name="savePath">/upload</param>
+			<result name="success" type="chain">showfile</result>
+			<result name="input">index.jsp</result>
+		</action>
+
+		<action name="practice" class="com.se.controller.practiceAction"
+				method="practice">
+			<result name="success">Practice.jsp</result>
+			<result name="input">index.jsp</result>
+		</action>
+
+		<action name="*exp*" class="com.se.controller.expAction"
+				method="{1}{2}">
+			<result name="success">Experiment.jsp</result>
+			<result name="show" type="chain">showexp</result>
+			<result name="detail">exp_detail.jsp</result>
+			<result name="detail_stu">exp_detail_stu.jsp</result>
+			<result name="report">report.jsp</result>
+			<result name="changeexp">changeexp.jsp</result>
+			<result name="stu_show">Experiment_stu.jsp</result>
+		</action>
+
+		<action name="*message*" class="com.se.controller.messageAction"
+				method="{1}{2}">
+			<result name="success">Message.jsp</result>
+			<result name="stu">message_stu.jsp</result>
+			<result name="admin">message_admin.jsp</result>
+			<result name="show" type="chain">showmessage</result>
+			<result name="show_stu" type="chain">showmessage_stu</result>
+			<result name="show_admin" type="chain">showmessage_admin</result>
+		</action>
+
+		<action name="*practice*" class="com.se.controller.practiceAction"
+				method="{1}practice{2}">
+			<result name="success" type="chain">practice</result>
+			<result name="practice_stu">Practice_stu_doing.jsp</result>
+			<result name="input">index.jsp</result>
+			<result name="stu_result">practice_stu_result.jsp</result>
+		</action>
+
+		<action name="*report" class="com.se.controller.reportAction"
+				method="{1}report">
+			<result name="report"> report_stu.jsp</result>
+			<result name="showreport" type="chain">showexp_stu</result>
+		</action>
+
+		<action name="output" class="com.se.controller.OutAction">
+			<result>Student.jsp</result>
+		</action>
+
+		<action name="download" class="com.se.controller.FileDownloadAction">
+			<result name="success" type="stream">
+				<param name="inputName">fileInputStream</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+
+		<action name="*pw*" class="com.se.controller.pwdAction" method="{1}{2}">
+			<result name="success"> changepassword.jsp</result>
+			<result name="index">index.jsp</result>
+			<result name="success_stu"> changepassword_stu.jsp</result>
+			<result name="index_stu">index_stu.jsp</result>
+		</action>
+
+		<action name="history" class="com.se.controller.historyAction"
+				method="history">
+			<result name="success"> history_stu.jsp</result>
+		</action>
+
+
+		<action name="*">
+			<result name="success">error.jsp</result>
+		</action>
+	</package>
+
+	<!--<include file="example.xml"/> -->
+
+	<!-- Add packages here -->
+
+</struts>
